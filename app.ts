@@ -10,7 +10,7 @@ let client: Client;
 let sessionData;
 
 const alreadyScanned = () => {
-    const spinner = ora(`Cargando ${chalk.yellow('Validando session con Whatsapp...')}`);
+    const spinner = ora(`${chalk.yellow('Validando session con Whatsapp...')}`);
     sessionData = require(SESSION_PATH_FILE);
     spinner.start();
     client = new Client({
@@ -87,10 +87,12 @@ const listenMessage = () => {
 
         //await greetCustomer(from);
 
-        const messageReceived = body.toLowerCase();
+        const messageReceived:string = body.toLowerCase();
+        let messageFiltered:string=messageReceived;
+        if (messageReceived.substr(0,4)==='hola') messageFiltered='hola'
 
-        switch(messageReceived){
-            case  'hola':
+        switch(messageFiltered){
+            case 'hola':
                 sendMessage(from,'Hola, soy un bot y Francisco ahora mismo no está operativo. Todavía no puedo hacer mucho, pero dale tiempo');
                 sendMessage(from,'😉');
             break;
