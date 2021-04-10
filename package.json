@@ -1,0 +1,34 @@
+{
+  "name": "whatsappBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.6.9",
+    "@types/puppeteer": "^5.4.3",
+    "jasmine-core": "^3.7.1",
+    "karma": "^6.3.2",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-webpack": "^5.0.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.31.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "mime-db": "^1.47.0",
+    "ora": "^5.4.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.12.5"
+  }
+}
